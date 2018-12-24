@@ -1,3 +1,8 @@
+/////////////////////////////////////////////////////
+/// Node library to call for python thermal printer
+//////
+/////////////////////////////////////////////////////
+
 let {PythonShell} = require('python-shell')
 
  let options = {
@@ -10,13 +15,13 @@ let {PythonShell} = require('python-shell')
 const pyPrint = {
    message : ( message ) => {
      options.args = [message];
-     console.log("pyPrint message");
+     console.log("PRINT MESSAGE :: ", message );
      PythonShell.run(`../../../../misyu/libs/pyPrint/print_message.py`, options, function (err) { if (err) throw err;  })
      return true
    },
   image : ( imagePath ) => {
     options.args = [imagePath];
-    console.log("pyPrint image");
+    console.log("PRINT PICTURE :: ", imagePath );
     PythonShell.run(`../../../../misyu/libs/pyPrint/print_image.py`, options, function (err) { if (err) throw err; })
    return true
   }

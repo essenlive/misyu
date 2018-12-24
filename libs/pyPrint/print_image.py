@@ -10,20 +10,17 @@ def print_image( imagePath = "/home/pi/misyu/files/test.jpg" ):
 
     printer = Adafruit_Thermal("/dev/serial0", 19200)
     printer.wake()
-    printer.feed(2)
 
     BASE_WIDTH = 384
     img = Image.open(imagePath)
     wpercent = (BASE_WIDTH / float(img.size[0]))
     hsize = int((float(img.size[1]) * float(wpercent)))
     img = img.resize((BASE_WIDTH, hsize))
-       
+
     printer.printImage(img)
 
     printer.feed(1)
     printer.setSize('S')
-    printer.println("___")
-    printer.feed(1)
     printer.println(datetime.now().strftime('%Y-%m-%d %H:%M'))
     printer.feed(1)
     printer.println("_______________________________")
