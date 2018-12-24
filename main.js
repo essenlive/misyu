@@ -34,15 +34,24 @@ startTunnel().then(()=> {
     bot.app.use(express.static('./files/send'));
     // start bot instance
     bot.start(process.env.PORT_BOT);
+    bot.say(process.env.ADMIN_ID, "BOT STARTED");
 
 
     // Bot action on message received //
     ////////////////////////////////////
     bot.on('message', (payload, chat) => {
       chat.say(`Merci pour ton message !`) //answer to aknowledge reception;
-      const text = payload.message.text; //get message content
-      console.log('MESSENGER MESSAGE RECEIVED ::', text);
-      pyPrint.message(text)   //Send message to thermal printer
+      const text = payload.message.text; // get message content
+      if( text === "ID"){
+        let facebookId = payload.sender.id;
+        console.log(facebookId);
+        console.log(process.env.ADMIN_ID);
+        bot.say(process.env.ADMIN_ID, facebookId);
+      }
+      else{
+        console.log('MESSENGER MESSAGE RECEIVED ::', text);
+        pyPrint.message(text)   //Send message to thermal printer
+      }
     });
 
     // Bot action on picture received //

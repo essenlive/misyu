@@ -40,3 +40,4 @@ atom remote-ftp plugin
 facebook bot
 Server / ngrok
 ./ngrok http -region=eu -subdomain=ouistiti 3000
+setup pm2 for startup
