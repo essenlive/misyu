@@ -1,10 +1,12 @@
 # misyu
+
 Small device to interact with messenger.
 ---
 The device prints pictures sent to a specific messenger bot.
 Then when you press the button, the device takes a picture and answers to the chat.
 
 ##TO DO
+
 Make the pi-camera promise work in code
 Simplify and clean code
 Auto Remove pictures from local folder
@@ -15,6 +17,7 @@ Rework Tunnel to have different options (reverse SSH ... )
 ---
 ## Setup
 ### Physical
+
 Cut the cad files
 Assemble
 ### Electronical Components
