@@ -19,9 +19,12 @@ Then when you press the button, the device takes a picture and answers to the ch
 - Rework Tunnel to have different options (reverse SSH ... )
 ---
 ## Setup
+🎯 Ok now you will need to setup your hardware, that means the pi zero, the camera, the press button and the printer. I pretty much
+
 ### 👨‍🏭 Physical
 
 [Here](https://a360.co/2ENZilE) you can view and download the 3D files.
+
 I will export the CAM files as well later on.
 
 
@@ -59,6 +62,8 @@ For the power input, solder the black and red cables to the power plug + and -, 
 
 
 ### 👩‍💻 Software
+🎯 Ok now you will need to setup your hardware, that means the pi zero, the camera, the press button and the printer. I pretty much
+
 #### Server / ngrok
 
 #### Facebook Bot
